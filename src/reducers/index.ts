@@ -1,9 +1,7 @@
+import { connectRouter, LocationChangeAction, RouterState } from 'connected-react-router'
 import { combineReducers, Reducer } from 'redux'
 import { all } from 'redux-saga/effects'
-import { connectRouter, RouterState, LocationChangeAction } from 'connected-react-router'
-
 import challenges from './challenges'
-console.log('🤫 Dante ➤ challenges', challenges)
 
 export interface State {
   router: Reducer<RouterState, LocationChangeAction>,

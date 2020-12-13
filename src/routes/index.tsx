@@ -4,20 +4,30 @@ import { ConnectedRouter } from 'connected-react-router'
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
+/** Layout */
 const Main = loadable(() => import(/* webpackPrefetch: true */  'containers/Main'), {
   fallback: <Loading />
 })
 
+/** Views */
 const Dashboard = loadable(() => import(/* webpackPrefetch: true */ 'containers/Dashboard'), {
+  fallback: <Loading />
+})
+
+const Login = loadable(() => import(/* webpackPrefetch: true */ 'containers/views/Login'), {
   fallback: <Loading />
 })
 
 export default (history: any) => (
   <ConnectedRouter history={history}>
     <Switch>
+      <Route component={Login} path='/login' />
+
       <Route>
         <Main>
-          <Route component={Dashboard} exact path='/' />
+          <Switch>
+            <Route component={Dashboard} exact path='/' />
+          </Switch>
         </Main>
       </Route>
     </Switch>

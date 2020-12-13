@@ -1,8 +1,8 @@
 import axios, { CancelTokenSource, AxiosInstance } from 'axios'
 
-const { REACT_APP_REST_API_LOCATION = 'http://localhost:5000', REACT_APP_API_VERSION = 'v1' } = process.env
+const { REACT_APP_REST_API_LOCATION = 'http://localhost:3123/' } = process.env
 
-export const baseURL = REACT_APP_REST_API_LOCATION + '/api/' + REACT_APP_API_VERSION + '/'
+export const baseURL = REACT_APP_REST_API_LOCATION
 
 type Payload = Record<string, any>
 
@@ -28,7 +28,10 @@ export const http = function(): AxiosInstance {
 
   const instance = axios.create({
     baseURL    : baseURL,
-    cancelToken: _source.token
+    cancelToken: _source.token,
+    headers    : {
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQGdtYWlsLmNvbSIsInVzZXJJZCI6Ijk1ZGU3YTZkLTQxZTYtNDg0Ny1hNGRhLWFiODNlMWYyM2ViOSIsImlhdCI6MTYwNzMyNDcxNn0.5IhzAfZlMR0a003TA6LhbRZ_JJ6VJ2w9UhSF81ID74k'
+    }
   })
 
   return instance

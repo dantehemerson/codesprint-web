@@ -1,33 +1,41 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { Challenge } from 'components/Challenge'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import challengeDucks from 'reducers/challenges'
 
-import { useComponentWillMount } from 'lib/hooks'
-
-import counterDucks from 'reducers/counter'
-
-const { addCount, removeCount, addCountFromServer } = counterDucks.creators
+const { getChallenges } = challengeDucks.creators
 
 interface Selector {
-  counter: {
-    count: number
+  challenges: {
+    challenges: any[]
   }
 }
 
 export default () => {
   const dispatch = useDispatch()
-  const count = useSelector(({ counter: { count } }: Selector) => count)
+  const [ c, setC ] = useState(1)
+  const { challenges } = useSelector((state: Selector) => state.challenges)
 
-  useComponentWillMount(() => {
-    dispatch(addCountFromServer())
-  })
+  useEffect(() => {
+    dispatch(getChallenges())
+  }, [])
 
   return (
     <div data-testid='counter'>
-      <h1>Counter</h1>
-      <h2>{count}</h2>
-      <button onClick={() => dispatch(addCount())}>Add</button>
-      <button onClick={() => dispatch(removeCount())}>remove</button>
-      <button onClick={() => dispatch(addCountFromServer(true))}>Add 5 From Server</button>
+      <p>Challenges {c}</p>
+      <section className='text-gray-700 body-font'>
+        <div className='container px-5 py-24 mx-auto'>
+          <div className='flex flex-wrap -m-4'>
+            {
+              challenges.map(challenge => (
+                <div className='p-4 md:w-1/3' key={challenge.id}>
+                  <Challenge challenge={challenge} />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

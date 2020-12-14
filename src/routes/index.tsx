@@ -11,18 +11,19 @@ const Main = loadable(() => import(/* webpackPrefetch: true */  'containers/Main
 
 /** Views */
 const Dashboard = loadable(() => import(/* webpackPrefetch: true */ 'containers/Dashboard'), {
-  fallback: <Loading />
+  fallback: <Loading />,
+  ssr     : true
 })
 
 const Login = loadable(() => import(/* webpackPrefetch: true */ 'containers/views/Login'), {
-  fallback: <Loading />
+  fallback: <Loading />,
+  ssr     : true
 })
 
 export default (history: any) => (
   <ConnectedRouter history={history}>
     <Switch>
       <Route component={Login} path='/login' />
-
       <Route>
         <Main>
           <Switch>

@@ -1,10 +1,40 @@
-import React from 'react'
 import FooterSmall from 'components/Footer/Footer'
-import backgroundImage from 'assets/img/register_bg_2.png'
-import googleLogo from 'assets/img/google.svg'
-import githubLogo from 'assets/img/github.svg'
+import { useObjectState } from 'lib/hooks/use-object-state.hook'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import usersDucks from 'reducers/users'
+
+type Selector = {
+  users: {
+    cookie: string
+    status: string
+  }
+}
+
+const {
+  login
+} = usersDucks.creators
 
 export default function Login() {
+  const dispatch = useDispatch()
+  const { status } = useSelector((state: Selector) => state.users)
+
+  const [ userData, setUserData ] = useObjectState({ email: 'dante@gmail.com', password: 'dante' })
+
+  useEffect(() => {
+    if(status === 'USER_AUTHENTICATED')
+      if(window) {
+        window.location.href = '/'
+      }
+  }, [ status ])
+
+  console.log('🤫 Dante ➤ Login ➤ status', status, userData)
+
+  const handleClickLogin = () => {
+    if(userData.email && userData.password)
+      dispatch(login(userData))
+  }
+
   return (
     <>
       {/* <Navbar transparent /> */}
@@ -14,7 +44,7 @@ export default function Login() {
             className='absolute top-0 w-full h-full bg-gray-800'
             style={{
               backgroundImage:
-                'url(' + backgroundImage + ')',
+                'url(' + 'https://res.cloudinary.com/dantecalderon/image/upload/v1607905866/codesprint/register_bg_2_ddk8qd.png' + ')',
               backgroundSize  : '100%',
               backgroundRepeat: 'no-repeat'
             }}></div>
@@ -36,7 +66,7 @@ export default function Login() {
                         <img
                           alt='...'
                           className='w-5 mr-1'
-                          src={githubLogo} />
+                          src={'https://res.cloudinary.com/dantecalderon/image/upload/v1607905865/codesprint/github_zypo1q.svg'} />
                         Github
                       </button>
                       <button
@@ -46,7 +76,7 @@ export default function Login() {
                         <img
                           alt='...'
                           className='w-5 mr-1'
-                          src={googleLogo} />
+                          src={'https://res.cloudinary.com/dantecalderon/image/upload/v1607905865/codesprint/google_nuddkl.svg'} />
                         Google
                       </button>
                     </div>
@@ -65,9 +95,11 @@ export default function Login() {
                         </label>
                         <input
                           className='px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full'
+                          onChange={e => setUserData({ email: e.target.value })}
                           placeholder='Email'
                           style={{ transition: 'all .15s ease' }}
-                          type='email' />
+                          type='email'
+                          value={userData.email} />
                       </div>
 
                       <div className='relative w-full mb-3'>
@@ -78,9 +110,11 @@ export default function Login() {
                         </label>
                         <input
                           className='px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full'
+                          onChange={e => setUserData({ password: e.target.value })}
                           placeholder='Password'
                           style={{ transition: 'all .15s ease' }}
-                          type='password' />
+                          type='password'
+                          value={userData.password} />
                       </div>
                       <div>
                         <label className='inline-flex items-center cursor-pointer'>
@@ -98,6 +132,7 @@ export default function Login() {
                       <div className='text-center mt-6'>
                         <button
                           className='bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full'
+                          onClick={handleClickLogin}
                           style={{ transition: 'all .15s ease' }}
                           type='button'>
                           Sign In

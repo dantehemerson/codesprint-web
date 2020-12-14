@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import { Store, AnyAction } from 'redux'
-
+import { AnyAction, Store } from 'redux'
 import DevTools from './DevTools'
 
 interface RootProps {

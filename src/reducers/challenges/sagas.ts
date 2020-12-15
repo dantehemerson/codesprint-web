@@ -1,4 +1,4 @@
-import { Get } from 'lib/Request'
+import { Get } from 'lib/request'
 import { DuckTypes } from 'reducers/base'
 import { call, put } from 'redux-saga/effects'
 

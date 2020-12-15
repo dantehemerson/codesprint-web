@@ -1,6 +1,6 @@
 
 import Cookies from 'js-cookie'
-import { Post } from 'lib/Request'
+import { Post } from 'lib/request'
 import { DuckTypes } from 'reducers/base'
 import { call, put } from 'redux-saga/effects'
 import { LoginRequestDto } from './types/login.request.dto'

@@ -11,13 +11,15 @@ const Main = loadable(() => import(/* webpackPrefetch: true */  'containers/Main
 
 /** Views */
 const Dashboard = loadable(() => import(/* webpackPrefetch: true */ 'containers/Dashboard'), {
-  fallback: <Loading />,
-  ssr     : true
+  fallback: <Loading />
 })
 
 const Login = loadable(() => import(/* webpackPrefetch: true */ 'containers/views/Login'), {
-  fallback: <Loading />,
-  ssr     : true
+  fallback: <Loading />
+})
+
+const Challenge = loadable(() => import(/* webpackPrefetch: true */ 'containers/views/Challenge'), {
+  fallback: <Loading />
 })
 
 export default (history: any) => (
@@ -28,6 +30,7 @@ export default (history: any) => (
         <Main>
           <Switch>
             <Route component={Dashboard} exact path='/' />
+            <Route component={Challenge} exact path='/challenge/:id' />
           </Switch>
         </Main>
       </Route>

@@ -1,4 +1,5 @@
 import axios, { CancelTokenSource, AxiosInstance } from 'axios'
+import Cookie from 'js-cookie'
 
 const { REACT_APP_REST_API_LOCATION = 'http://localhost:3123/' } = process.env
 
@@ -28,30 +29,31 @@ export const http = function(): AxiosInstance {
 
   const instance = axios.create({
     baseURL    : baseURL,
-    cancelToken: _source.token,
-    headers    : {
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQGdtYWlsLmNvbSIsInVzZXJJZCI6Ijk1ZGU3YTZkLTQxZTYtNDg0Ny1hNGRhLWFiODNlMWYyM2ViOSIsImlhdCI6MTYwNzMyNDcxNn0.5IhzAfZlMR0a003TA6LhbRZ_JJ6VJ2w9UhSF81ID74k'
-    }
+    cancelToken: _source.token
   })
 
   return instance
 }
 
 export function Put(route: string, json: Payload = {}): Promise<void> {
+  const jwt = Cookie.get('jwtToken')
+
   return new Promise((resolve, reject) => {
     verifyRequestCancel(route)
     http()
-      .put(route, json)
+      .put(route, json, { headers: { Authorization: `Bearer ${jwt}` } })
       .then(res => resolve(res.data))
       .catch(e => reject({ type: axios.isCancel(e) ? 'cancel' : 'err', ...e }))
   })
 }
 
 export function Delete(route: string, json: Payload = {}): Promise<void> {
+  const jwt = Cookie.get('jwtToken')
+
   return new Promise((resolve, reject) => {
     verifyRequestCancel(route)
     http()
-      .delete(route, { data: json })
+      .delete(route, { data: json,  headers: { Authorization: `Bearer ${jwt}` } })
       .then(res => resolve(res.data))
       .catch(e => {
         reject({ type: axios.isCancel(e) ? 'cancel' : 'err', ...e })
@@ -60,10 +62,12 @@ export function Delete(route: string, json: Payload = {}): Promise<void> {
 }
 
 export function Patch(route: string, json: Payload = {}): Promise<void> {
+  const jwt = Cookie.get('jwtToken')
+
   return new Promise((resolve, reject) => {
     verifyRequestCancel(route)
     http()
-      .patch(route, json)
+      .patch(route, json, { headers: { Authorization: `Bearer ${jwt}` } })
       .then(res => resolve(res.data))
       .catch(e => {
         reject({ type: axios.isCancel(e) ? 'cancel' : 'err', ...e })
@@ -72,10 +76,12 @@ export function Patch(route: string, json: Payload = {}): Promise<void> {
 }
 
 export function Post(route: string, json: Payload = {}): Promise<void> {
+  const jwt = Cookie.get('jwtToken')
+
   return new Promise((resolve, reject) => {
     verifyRequestCancel(route)
     http()
-      .post(route, json)
+      .post(route, json, { headers: { Authorization: `Bearer ${jwt}` } })
       .then(res => resolve(res.data))
       .catch(e => {
         reject({ type: axios.isCancel(e) ? 'cancel' : 'err', ...e })
@@ -84,10 +90,12 @@ export function Post(route: string, json: Payload = {}): Promise<void> {
 }
 
 export function Get(route: string): Promise<void> {
+  const jwt = Cookie.get('jwtToken')
+
   return new Promise((resolve, reject) => {
     verifyRequestCancel(route)
     http()
-      .get(route)
+      .get(route, { headers: { Authorization: `Bearer ${jwt}` } })
       .then(res => {
         resolve(res.data)
       })

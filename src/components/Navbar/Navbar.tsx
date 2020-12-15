@@ -1,5 +1,6 @@
 import React from 'react'
 import { UserDropdown } from './UserDropdown'
+import { Link } from 'react-router-dom'
 
 export function Navbar() {
   return (
@@ -8,7 +9,7 @@ export function Navbar() {
         <div className='md:flex md:items-center md:justify-between w-full'>
           <div className='flex justify-between items-center'>
             <div className='text-xl font-semibold text-gray-700'>
-              <a className='text-gray-800 text-xl font-bold hover:text-gray-700 md:text-2xl' href='/'>CodeSprint</a>
+              <Link className='text-gray-800 text-xl font-bold hover:text-gray-700 md:text-2xl' to='/'>CodeSprint</Link>
             </div>
           </div>
           <div className='hidden md:flex md:items-center md:justify-between flex-1'>

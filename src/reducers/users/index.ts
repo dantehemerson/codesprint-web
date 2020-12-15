@@ -6,7 +6,7 @@ import produce from 'immer'
 import { LoginRequestDto } from './types/login.request.dto'
 
 const initialState = {
-  cookie: []
+  cookie: null
 }
 
 export type Counter = DuckInitialState & typeof initialState
@@ -22,15 +22,21 @@ export default base({
   initialState
 }).extend({
   selectors: ({ store }: DuckTypes) => ({
+    getCookie: (state: Counter) => state[store].cookie
   }),
   creators: ({ types }: DuckTypes) => ({
-    login: (payload: LoginRequestDto) => ({ type: types.POST, payload })
+    login    : (payload: LoginRequestDto) => ({ type: types.POST, payload }),
+    setCookie: (payload: { cookie: string }) => ({ type: types.POST, payload })
   }),
   reducer: (state: Counter, action: Action, { types }: DuckTypes) => produce<Counter>(state, (draft) => {
     switch (action.type) {
       case types.LOGIN_SUCCESS:
         draft.cookie = action.payload.cookie
         draft.status = 'USER_AUTHENTICATED'
+
+        return
+      case types.REHYDRATE_AUTH:
+        draft.cookie = action.payload.cookie
 
         return
       default:
@@ -44,6 +50,7 @@ export default base({
     takeEvery(types.POST, sagas.login)
   ],
   types: [
-    'LOGIN_SUCCESS'
+    'LOGIN_SUCCESS',
+    'REHYDRATE_AUTH'
   ]
 })

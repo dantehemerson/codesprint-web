@@ -9,7 +9,7 @@ export type ChallengeDto = {
   bodyHtml: string;
   bodyMarkdown: string;
   categories: CategoryDto[];
-  createdBy: UserDto | string;
+  createdBy?: UserDto;
   createdAt: Date;
   updatedAt: Date;
 }

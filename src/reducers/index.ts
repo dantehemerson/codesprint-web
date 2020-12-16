@@ -2,6 +2,7 @@ import { connectRouter, LocationChangeAction, RouterState } from 'connected-reac
 import { combineReducers, Reducer } from 'redux'
 import { all } from 'redux-saga/effects'
 import challenges from './challenges'
+import challenge from './challenge'
 import users from './users'
 
 export interface State {
@@ -10,12 +11,12 @@ export interface State {
 }
 
 export function* rootSaga(): Generator<any, any, any> {
-  yield all([ ...challenges.takes, ...users.takes ])
+  yield all([ ...challenges.takes, ...challenge.takes, ...users.takes  ])
 }
 
 export default (history: any) => combineReducers({
   router            : connectRouter(history),
   [challenges.store]: challenges.reducer,
+  [challenge.store] : challenge.reducer,
   [users.store]     : users.reducer
 })
-

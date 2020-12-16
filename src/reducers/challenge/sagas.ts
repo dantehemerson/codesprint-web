@@ -2,16 +2,16 @@ import { Get } from 'lib/request'
 import { DuckTypes } from 'reducers/base'
 import { call, put } from 'redux-saga/effects'
 
-export const getChallenges = ({ types }: DuckTypes) => function *(): Generator<any, any, any> {
+export const getChallenge = ({ types }: DuckTypes) => function *({ challengeId }: any): Generator<any, any, any> {
   try {
     yield put({ type: types.FETCH_PENDING })
 
-    const challenges = yield call(Get, '/challenges')
+    const challenge = yield call(Get, `/challenges/${challengeId}`)
 
     yield put({
       type   : types.FETCH_FULFILLED,
       payload: {
-        challenges
+        challenge
       }
     })
   } catch (e) {

@@ -1,4 +1,4 @@
-import { UserDto } from '../../users/types/user.dto'
+import { UserDto } from '../../user/types/user.dto'
 import { CategoryDto } from '../../categories/category.type'
 
 export type ChallengeDto = {

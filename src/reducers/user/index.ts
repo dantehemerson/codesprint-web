@@ -1,10 +1,10 @@
 import base, { DuckInitialState, DuckTypes } from 'reducers/base'
 import { takeEvery } from 'redux-saga/effects'
-import { getChallenge } from './sagas'
+import { getUser } from './sagas'
 import produce from 'immer'
 
 const initialState = {
-  challenge: {}
+  user: {}
 }
 
 export type Counter = DuckInitialState & typeof initialState
@@ -16,21 +16,21 @@ export type Action = {
 
 export default base({
   namespace: 'crassa',
-  store    : 'challenge',
+  store    : 'user',
   initialState
 }).extend({
   selectors: ({ store }: DuckTypes) => ({
-    getChallenge: (state: Counter) => state[store].challenge,
-    getStatus   : (state: Counter) => state[store].status
+    getUser  : (state: Counter) => state[store].user,
+    getStatus: (state: Counter) => state[store].status
   }),
   creators: ({ types }: DuckTypes) => ({
-    getChallenge: (challengeId: string) => ({ type: types.FETCH, challengeId }),
-    resetValues : () => ({ type: types.RESET_VALUES })
+    getUser    : (userId: string) => ({ type: types.FETCH, userId }),
+    resetValues: () => ({ type: types.RESET_VALUES })
   }),
   reducer: (state: Counter, action: Action, { types,statuses  }: DuckTypes) => produce<Counter>(state, (draft) => {
     switch (action.type) {
       case types.RESET_VALUES:
-        draft.challenge = {}
+        draft.user = {}
         draft.status = statuses.NEW
 
         return
@@ -39,10 +39,10 @@ export default base({
     }
   }),
   sagas: {
-    getChallenge: getChallenge
+    getUser
   },
   takes: ({ types, sagas }: DuckTypes) => [
-    takeEvery(types.FETCH, sagas.getChallenge)
+    takeEvery(types.FETCH, sagas.getUser)
   ],
   types: [
     'RESET_VALUES'

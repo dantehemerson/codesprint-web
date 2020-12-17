@@ -22,6 +22,10 @@ const Challenge = loadable(() => import(/* webpackPrefetch: true */ 'containers/
   fallback: <Loading />
 })
 
+const Profile = loadable(() => import(/* webpackPrefetch: true */ 'containers/views/Profile'), {
+  fallback: <Loading />
+})
+
 export default (history: any) => (
   <ConnectedRouter history={history}>
     <Switch>
@@ -31,6 +35,7 @@ export default (history: any) => (
           <Switch>
             <Route component={Dashboard} exact path='/' />
             <Route component={Challenge} exact path='/challenge/:id' />
+            <Route component={Profile} exact path='/@:username' />
           </Switch>
         </Main>
       </Route>

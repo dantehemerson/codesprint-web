@@ -88,6 +88,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "11.1.1",
+    "@types/extensible-duck": "1.6.1",
     "@types/js-cookie": "2.2.6",
     "@types/loadable__component": "5.13.1",
     "@types/react-router-dom": "5.1.6",

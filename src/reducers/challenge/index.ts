@@ -4,7 +4,7 @@ import { getChallenge } from './sagas'
 import produce from 'immer'
 
 const initialState = {
-  challenge: []
+  challenge: {}
 }
 
 export type Counter = DuckInitialState & typeof initialState
@@ -24,10 +24,20 @@ export default base({
     getStatus   : (state: Counter) => state[store].status
   }),
   creators: ({ types }: DuckTypes) => ({
-    getChallenge: (challengeId: string) => ({ type: types.FETCH, challengeId })
+    getChallenge: (challengeId: string) => ({ type: types.FETCH, challengeId }),
+    resetValues : () => {console.log('Creatooooor', { type: types.RESET_VALUES })
+
+      return ({ type: types.RESET_VALUES }) }
   }),
-  reducer: (state: Counter, action: Action, { types }: DuckTypes) => produce<Counter>(state, (draft) => {
+  reducer: (state: Counter, action: Action, { types,statuses  }: DuckTypes) => produce<Counter>(state, (draft) => {
+    console.log('Ejecutando la acccionononononon,', action)
     switch (action.type) {
+      case types.RESET_VALUES:
+        draft.challenge = {}
+        draft.status = statuses.NEW
+        console.log('Reseteando el estado ', draft)
+
+        return
       default:
         return
     }
@@ -37,5 +47,8 @@ export default base({
   },
   takes: ({ types, sagas }: DuckTypes) => [
     takeEvery(types.FETCH, sagas.getChallenge)
+  ],
+  types: [
+    'RESET_VALUES'
   ]
 })

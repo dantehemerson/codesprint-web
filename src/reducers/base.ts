@@ -1,6 +1,5 @@
 import produce from 'immer'
 import { TakeableChannel } from 'redux-saga'
-
 const Duck = require('extensible-duck').default
 
 export interface DuckTypes {

@@ -22,9 +22,8 @@ export default function Profile({ match }: any) {
 
   const { user, status } = useSelector((state: Selector) => state.user)
 
-  console.log('🤫 Dante ➤ Profile ➤ user', username)
   useEffect(() => {
-    dispatch(getUser(username))
+    dispatch(getUser('95de7a6d-41e6-4847-a4da-ab83e1f23eb9'))
 
     return () => dispatch(resetValues())
   }, [])
@@ -32,8 +31,16 @@ export default function Profile({ match }: any) {
   if(status === 'LOADING') return <div></div>
 
   return (
-    <>
-      <p>Mi Perfilllllllllllllllllll</p>
-    </>
+    <div className='container mx-auto flex flex-col px-5 py-24 justify-center items-center'>
+      <div className='flex flex-start mb-10 w-full border-4 border-light-blue-500 border-opacity-100 br'>
+        <div className='w-1/4 p-10'>
+          <img alt='hero' className='w-28 h-28 object-cover m-0 rounded-full' src={user.avatar} />
+        </div>
+        <div className='p-10'>
+          <h1>{user.name}</h1>
+          <h3>{user.email}</h3>
+        </div>
+      </div>
+    </div>
   )
 }

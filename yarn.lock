@@ -1860,6 +1860,11 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/extensible-duck@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@types/extensible-duck/-/extensible-duck-1.6.1.tgz#2f8c95ccc5564d071fdb9d71b7524947e77ad0e9"
+  integrity sha512-AKFu+FF2uF/k/CJkLlsmzNf/0AXiAx9Lc+BXLubxFxNp9Q6CN7Jjupa/zpTJl6lNeXjVYQlqM8Aepd2bIaI+Uw==
+
 "@types/fined@*":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@types/fined/-/fined-1.1.2.tgz#05d2b9f93d144855c97c18c9675f424ed01400c4"

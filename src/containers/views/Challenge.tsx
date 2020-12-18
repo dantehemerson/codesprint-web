@@ -6,22 +6,28 @@ import { ChallengeDto } from 'reducers/challenge/types/challenge.type'
 type Selector = {
   challenge: {
     challenge: ChallengeDto
+    status: string
   }
 }
 
 const {
-  getChallenge
+  getChallenge,
+  resetValues
 } = challengeDucks.creators
 
 export default function Challenge({ match }: any) {
   const { params: { id } } = match
   const dispatch = useDispatch()
 
-  const { challenge } = useSelector((state: Selector) => state.challenge)
+  const { challenge, status } = useSelector((state: Selector) => state.challenge)
 
   useEffect(() => {
     dispatch(getChallenge(id))
+
+    return () => dispatch(resetValues())
   }, [])
+
+  if(status === 'LOADING') return <div></div>
 
   return (
     <>

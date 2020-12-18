@@ -23,7 +23,7 @@ export default function Profile({ match }: any) {
   const { user, status } = useSelector((state: Selector) => state.user)
 
   useEffect(() => {
-    dispatch(getUser('95de7a6d-41e6-4847-a4da-ab83e1f23eb9'))
+    dispatch(getUser(username))
 
     return () => dispatch(resetValues())
   }, [])

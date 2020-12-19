@@ -1,3 +1,4 @@
+import { useComponentWillMount } from 'lib/hooks'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import challengeDucks from 'reducers/challenge'
@@ -19,15 +20,15 @@ export default function Challenge({ match }: any) {
   const { params: { id } } = match
   const dispatch = useDispatch()
 
-  const { challenge, status } = useSelector((state: Selector) => state.challenge)
+  const { challenge } = useSelector((state: Selector) => state.challenge)
+
+  useComponentWillMount(() => {
+    dispatch(getChallenge(id))
+  })
 
   useEffect(() => {
-    dispatch(getChallenge(id))
-
     return () => dispatch(resetValues())
-  }, [])
-
-  if(status === 'LOADING') return <div></div>
+  },[])
 
   return (
     <>

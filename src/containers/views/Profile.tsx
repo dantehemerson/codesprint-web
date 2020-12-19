@@ -1,4 +1,5 @@
 
+import { useComponentWillMount } from 'lib/hooks'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import userDucks from 'reducers/user'
@@ -20,15 +21,15 @@ export default function Profile({ match }: any) {
   const { params: { username } } = match
   const dispatch = useDispatch()
 
-  const { user, status } = useSelector((state: Selector) => state.user)
+  const { user } = useSelector((state: Selector) => state.user)
+
+  useComponentWillMount(() => {
+    dispatch(getUser(username))
+  })
 
   useEffect(() => {
-    dispatch(getUser(username))
-
     return () => dispatch(resetValues())
   }, [])
-
-  if(status === 'LOADING') return <div></div>
 
   return (
     <div className='container mx-auto flex flex-col px-5 py-24 justify-center items-center'>

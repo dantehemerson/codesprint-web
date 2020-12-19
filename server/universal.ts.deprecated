@@ -1,0 +1,22 @@
+import { renderToString } from 'react-dom/server'
+
+let cachedCssFile: string
+
+export const setRenderUniversal = (locals: any, app: any, extractor: any) => {
+  const { htmlData } = locals
+
+  if(!cachedCssFile) {
+    const mainCssFile = extractor.stats.assetsByChunkName.main.filter(
+      (filePath: string) => filePath.startsWith('static/css')
+    )[0]
+
+    cachedCssFile = `<link id="css-server-side" rel="stylesheet" href="/${mainCssFile}">`
+  }
+
+  const renderString = renderToString(app)
+
+  return {
+    prevHtml: htmlData.replace('<head>', `<head>${cachedCssFile}`),
+    renderString
+  }
+}

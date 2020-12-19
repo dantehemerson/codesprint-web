@@ -6,7 +6,7 @@ import produce from 'immer'
 import { LoginRequestDto } from './types/login.request.dto'
 
 const initialState = {
-  cookie: null
+  cookie: undefined
 }
 
 export type Counter = DuckInitialState & typeof initialState

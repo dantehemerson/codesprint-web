@@ -26,7 +26,7 @@ export default base({
   }),
   creators: ({ types }: DuckTypes) => ({
     login    : (payload: LoginRequestDto) => ({ type: types.POST, payload }),
-    setCookie: (payload: { cookie: string }) => ({ type: types.POST, payload })
+    setCookie: (payload: { cookie: string }) => ({ type: types.SET_COOKIE, payload })
   }),
   reducer: (state: Counter, action: Action, { types }: DuckTypes) => produce<Counter>(state, (draft) => {
     switch (action.type) {
@@ -36,6 +36,10 @@ export default base({
 
         return
       case types.REHYDRATE_AUTH:
+        draft.cookie = action.payload.cookie
+
+        return
+      case types.SET_COOKIE:
         draft.cookie = action.payload.cookie
 
         return
@@ -51,6 +55,7 @@ export default base({
   ],
   types: [
     'LOGIN_SUCCESS',
-    'REHYDRATE_AUTH'
+    'REHYDRATE_AUTH',
+    'SET_COOKIE'
   ]
 })

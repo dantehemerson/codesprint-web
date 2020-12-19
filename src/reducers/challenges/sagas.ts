@@ -1,12 +1,16 @@
 import { Get } from 'lib/request'
 import { DuckTypes } from 'reducers/base'
-import { call, put } from 'redux-saga/effects'
+import { call, put, select } from 'redux-saga/effects'
+import userDucks from 'reducers/users'
 
-export const getChallenges = ({ types }: DuckTypes) => function *(): Generator<any, any, any> {
+const { getCookie } = userDucks.selectors
+
+export const getChallenges = ({  types }: DuckTypes) => function *(): Generator<any, any, any> {
   try {
     yield put({ type: types.FETCH_PENDING })
 
-    const challenges = yield call(Get, '/challenges')
+    const tokenStore = yield select(getCookie)
+    const challenges = yield call(Get, '/challenges', tokenStore)
 
     yield put({
       type   : types.FETCH_FULFILLED,

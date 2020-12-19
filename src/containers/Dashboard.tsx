@@ -1,5 +1,6 @@
 import { Challenge } from 'components/Challenge'
-import React, { useEffect } from 'react'
+import { useComponentWillMount } from 'lib/hooks'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import challengeDucks from 'reducers/challenges'
 
@@ -15,9 +16,9 @@ export default () => {
   const dispatch = useDispatch()
   const { challenges } = useSelector((state: Selector) => state.challenges)
 
-  useEffect(() => {
+  useComponentWillMount(() => {
     dispatch(getChallenges())
-  }, [])
+  })
 
   return (
     <div data-testid='counter'>

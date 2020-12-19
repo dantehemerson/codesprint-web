@@ -4,7 +4,7 @@ const postcss = require(path.join(process.cwd() , '../postcss'))
 const postcssTailwindcss = require(path.join(process.cwd() , '../tailwindcss'))
 const postcssPresetEnv = require(path.join(process.cwd() , '../postcss-preset-env'))
 
-export const setRenderUniversal = async (locals, app) => {
+export const setRenderUniversal = async (locals: any, app: any) => {
   const { htmlData } = locals
 
   const postcssPluginConfig = postcss([
@@ -14,15 +14,12 @@ export const setRenderUniversal = async (locals, app) => {
 
   const processCss = async (style: any) => {
     const processedStyles = await postcssPluginConfig.process(style)
-    console.log('🤫 Dante ➤ processCss ➤ processedStyles', processedStyles)
 
     return processedStyles.css
   }
   const tywin = await processCss('')
 
   const renderString = renderToString(app)
-
-  console.log('🤫 Dante ➤ processCss ➤ processCss', processCss)
 
   const tywinStylesheets = `<style id="jss-server-side">${tywin}</style>`
 

@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, EffectCallback } from 'react'
 
 const { NODE_ENV } = process.env

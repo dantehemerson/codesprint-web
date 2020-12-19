@@ -75,9 +75,7 @@ export function Patch(route: string, json: Payload = {}): Promise<void> {
   })
 }
 
-export function Post(route: string, json: Payload = {}): Promise<void> {
-  const jwt = Cookie.get('jwtToken')
-
+export function Post(route: string, json: Payload = {}, jwt: string | undefined = Cookie.get('jwtToken')): Promise<void> {
   return new Promise((resolve, reject) => {
     verifyRequestCancel(route)
     http()
@@ -89,9 +87,7 @@ export function Post(route: string, json: Payload = {}): Promise<void> {
   })
 }
 
-export function Get(route: string): Promise<void> {
-  const jwt = Cookie.get('jwtToken')
-
+export function Get(route: string, jwt: string | undefined = Cookie.get('jwtToken')): Promise<void> {
   return new Promise((resolve, reject) => {
     verifyRequestCancel(route)
     http()

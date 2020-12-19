@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChallengeDto } from 'reducers/challenges/types/challenge.type'
+import { ChallengeDto } from 'reducers/challenge/types/challenge.type'
 import { Link } from 'react-router-dom'
 
 type ChallengeProps = {

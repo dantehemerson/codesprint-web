@@ -1,7 +1,6 @@
 import { Get } from 'lib/request'
 import { DuckTypes } from 'reducers/base'
 import { call, put, select } from 'redux-saga/effects'
-
 import userDucks from 'reducers/users'
 
 const { getCookie } = userDucks.selectors

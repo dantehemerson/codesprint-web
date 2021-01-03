@@ -15,6 +15,7 @@ module.exports = {
       contentFiles
     ]
   },
+  // darkMode: 'dark',
   theme: {
     themeVariants: [ 'dark' ],
     customForms  : (theme) => ({

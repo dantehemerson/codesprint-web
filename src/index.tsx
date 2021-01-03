@@ -8,6 +8,13 @@ import App from './App'
 
 if(module.hot) module.hot.accept()
 
+try {
+  const isDark = localStorage.getItem('dark') === 'true'
+  if(isDark) {
+    document.documentElement.classList.add('theme-dark')
+  }
+} catch {}
+
 const render = (Component: React.FC<Record<string, unknown>>, type: 'render' | 'hydrate' = 'render') => {
   ReactDOM[type](
     <AppContainer key={Math.random()}>

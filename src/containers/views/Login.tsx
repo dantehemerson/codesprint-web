@@ -28,8 +28,6 @@ export default function Login() {
       }
   }, [ status ])
 
-  console.log('🤫 Dante ➤ Login ➤ status', status, userData)
-
   const handleClickLogin = () => {
     if(userData.email && userData.password)
       dispatch(login(userData))

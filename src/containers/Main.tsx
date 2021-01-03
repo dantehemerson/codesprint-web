@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { Navbar } from 'components/Navbar/Navbar'
 import { Sidebar } from 'components/Sidebar/Sidebar'
 
-export default function Main({ children }: any) {
+export default function Main({ children }: PropsWithChildren<unknown>) {
   return (
     <div className='flex h-screen bg-gray-50 dark:bg-gray-900'>
       <Sidebar />

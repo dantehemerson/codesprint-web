@@ -7,3 +7,5 @@ declare interface NodeModule {
 interface Window {
   __PRELOADED_STATE__: any;
 }
+
+type Maybe<T> = T | null | undefined

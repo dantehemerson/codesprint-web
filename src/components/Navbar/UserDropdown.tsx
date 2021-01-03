@@ -3,7 +3,6 @@ import Popper from 'popper.js'
 import { Link } from 'react-router-dom'
 
 export function  UserDropdown() {
-  // dropdown props
   const [ dropdownPopoverShow, setDropdownPopoverShow ] = React.useState(false)
   const btnDropdownRef = React.createRef<HTMLAnchorElement>()
   const popoverDropdownRef = React.createRef<HTMLDivElement>()
@@ -23,7 +22,6 @@ export function  UserDropdown() {
     <>
       <a
         className='text-gray-600 block'
-        href='#pablo'
         onClick={e => {
           e.preventDefault()
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover()
@@ -47,7 +45,6 @@ export function  UserDropdown() {
           className={
             'text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800'
           }
-          href='#pablo'
           to='/@dantehemerson'>
           Profile
         </Link>
@@ -55,7 +52,6 @@ export function  UserDropdown() {
           className={
             'text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800'
           }
-          href='#pablo'
           onClick={e => e.preventDefault()}>
           Settings
         </a>
@@ -64,7 +60,6 @@ export function  UserDropdown() {
           className={
             'text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800'
           }
-          href='#pablo'
           onClick={e => e.preventDefault()}>
           Sign Out
         </a>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar } from 'components/Navbar/Navbar'
-import { Sidebar } from 'components/Navbar/Sidebar'
+import { Sidebar } from 'components/Sidebar/Sidebar'
 
 export default function Main({ children }: any) {
   return (

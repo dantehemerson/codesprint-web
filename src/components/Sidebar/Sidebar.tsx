@@ -20,7 +20,7 @@ export function Sidebar() {
                 return (
                   <li className='relative px-6 py-3' key={index}>
                     {
-                      item.to === selectedTo &&  <span aria-hidden='true' className='absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg' />
+                      item.to === selectedTo &&  <span aria-hidden='true' className='absolute inset-y-0 left-0 w-1 bg-teal-600 rounded-tr-lg rounded-br-lg' />
                     }
                     <Link className='inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100' to={item.to}>
                       <svg
@@ -37,7 +37,7 @@ export function Sidebar() {
             }
           </ul>
           <div className='px-6 my-6'>
-            <button className='flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple'>
+            <button className='flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-teal-600 border border-transparent rounded-lg active:bg-teal-600 hover:bg-teal-700 focus:outline-none focus:shadow-outline-teal'>
                 Create account
               <span aria-hidden='true' className='ml-2'>+</span>
             </button>
@@ -54,7 +54,7 @@ export function Sidebar() {
           </a>
           <ul className='mt-6'>
             <li className='relative px-6 py-3'>
-              <span aria-hidden='true' className='absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg' />
+              <span aria-hidden='true' className='absolute inset-y-0 left-0 w-1 bg-teal-600 rounded-tr-lg rounded-br-lg' />
               <a className='inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100' href='index.html'>
                 <svg
                   aria-hidden='true' className='w-5 h-5' fill='none'
@@ -155,7 +155,7 @@ export function Sidebar() {
             </li>
           </ul>
           <div className='px-6 my-6'>
-            <button className='flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple'>
+            <button className='flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-teal-600 border border-transparent rounded-lg active:bg-teal-600 hover:bg-teal-700 focus:outline-none focus:shadow-outline-teal'>
                 Create account
               <span aria-hidden='true' className='ml-2'>+</span>
             </button>

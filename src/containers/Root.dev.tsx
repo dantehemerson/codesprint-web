@@ -13,10 +13,10 @@ export default class Root extends Component<RootProps> {
 
     return (
       <Provider store={store}>
-        <div>
+        <>
           {children}
           <DevTools />
-        </div>
+        </>
       </Provider>
     )
   }

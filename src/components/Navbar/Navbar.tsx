@@ -1,51 +1,80 @@
-import React from 'react'
-import { UserDropdown } from './UserDropdown'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+// import { UserDropdown } from './UserDropdown'
+// import { Link } from 'react-router-dom'
 
 export function Navbar() {
+  const [ lightMode, setLightMode ] = useState(false)
+
   return (
-    <nav className='fixed bg-white shadow w-full'>
-      <div className='mx-auto px-6 h-20  flex align-middle'>
-        <div className='md:flex md:items-center md:justify-between w-full'>
-          <div className='flex justify-between items-center'>
-            <div className='text-xl font-semibold text-gray-700'>
-              <Link className='text-gray-800 text-xl font-bold hover:text-gray-700 md:text-2xl' to='/'>CodeSprint</Link>
+    <header className='z-10 py-4 bg-white shadow-md dark:bg-gray-800'>
+      <div className='container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300'>
+        {/* Mobile hamburger */}
+        <button aria-label='Menu' className='p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple'>
+          <svg
+            aria-hidden='true' className='w-6 h-6' fill='currentColor'
+            viewBox='0 0 20 20'>
+            <path clipRule='evenodd' d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' fillRule='evenodd' />
+          </svg>
+        </button>
+        {/* Search input */}
+        <div className='flex justify-center flex-1 lg:mr-32'>
+          <div className='relative w-full max-w-xl mr-6 focus-within:text-purple-500'>
+            <div className='absolute inset-y-0 flex items-center pl-2'>
+              <svg
+                aria-hidden='true' className='w-4 h-4' fill='currentColor'
+                viewBox='0 0 20 20'>
+                <path clipRule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z' fillRule='evenodd' />
+              </svg>
             </div>
-          </div>
-          <div className='hidden md:flex md:items-center md:justify-between flex-1'>
-            <div className='flex flex-col -mx-4 md:flex-row md:items-center md:mx-8'>
-              <div className='mx-10 hidden md:block'>
-                <div className='pt-2 relative mx-auto text-gray-600'>
-                  <input
-                    className='border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none' name='search' placeholder='Search'
-                    type='search' />
-                  <button className='absolute right-0 top-0 mt-5 mr-4' type='submit'>
-                    <svg
-                      className='text-gray-600 h-4 w-4 fill-current' height='512px' id='Capa_1'
-                      version='1.1' viewBox='0 0 56.966 56.966'
-                      width='512px' x='0px' xmlSpace='preserve'
-                      xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' y='0px'>
-                      <path d='M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z' />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className='flex items-center mt-4 md:mt-0'>
-              <button aria-label='show notifications' className='mx-4 hidden md:block text-gray-600 hover:text-gray-700 focus:text-gray-700 focus:outline-none'>
-                <svg
-                  className='h-6 w-6' fill='none' viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'>
-                  <path
-                    d='M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9' stroke='currentColor' strokeLinecap='round'
-                    strokeLinejoin='round' strokeWidth={2} />
-                </svg>
-              </button>
-              <UserDropdown />
-            </div>
+            <input
+              aria-label='Search' className='w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input' placeholder='Search for projects'
+              type='text' />
           </div>
         </div>
+        <ul className='flex items-center flex-shrink-0 space-x-6'>
+          {/* Theme toggler */}
+          <li className='flex'>
+            <button aria-label='Toggle color mode' className='rounded-md focus:outline-none focus:shadow-outline-purple' onClick={() => setLightMode(prev => !prev)}>
+              {
+                lightMode ?
+                  <svg
+                    aria-hidden='true' className='w-5 h-5' fill='currentColor'
+                    viewBox='0 0 20 20'>
+                    <path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z' />
+                  </svg>                :
+                  <svg
+                    aria-hidden='true' className='w-5 h-5' fill='currentColor'
+                    viewBox='0 0 20 20'>
+                    <path clipRule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' fillRule='evenodd' />
+                  </svg>
+
+              }
+            </button>
+          </li>
+          {/* Notifications menu */}
+          <li className='relative'>
+            <button aria-haspopup='true'  aria-label='Notifications' className='relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple'>
+              <svg
+                aria-hidden='true' className='w-5 h-5' fill='currentColor'
+                viewBox='0 0 20 20'>
+                <path d='M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z' />
+              </svg>
+              {/* Notification badge */}
+              <span aria-hidden='true' className='absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800' />
+            </button>
+            <template x-if='isNotificationsMenuOpen' />
+          </li>
+          {/* Profile menu */}
+          <li className='relative'>
+            <button aria-haspopup='true'  aria-label='Account' className='align-middle rounded-full focus:shadow-outline-purple focus:outline-none'>
+              <img
+                alt='' aria-hidden='true' className='object-cover w-8 h-8 rounded-full'
+                src='https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82' />
+            </button>
+            <template x-if='isProfileMenuOpen' />
+          </li>
+        </ul>
       </div>
-    </nav>
+    </header>
   )
 }

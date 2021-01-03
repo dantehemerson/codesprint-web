@@ -4,14 +4,14 @@ import { Sidebar } from 'components/Navbar/Sidebar'
 
 export default function Main({ children }: any) {
   return (
-    <>
-      <Navbar />
-      <div className='flex w-full'>
-        <Sidebar />
-        <div className='flex-1'>
+    <div className='flex h-screen bg-gray-50 dark:bg-gray-900'>
+      <Sidebar />
+      <div className='flex flex-col flex-1 w-full'>
+        <Navbar />
+        <div className='h-full overflow-y-auto'>
           {children}
         </div>
-      </div>3
-    </>
+      </div>
+    </div>
   )
 }

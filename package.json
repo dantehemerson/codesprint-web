@@ -9,7 +9,7 @@
     "dev": "crassa dev",
     "server:build": "crassa server-build",
     "g": "crassa g",
-    "lint": "crassa lint",
+    "lint": "eslint ./src/**/*.{ts,tsx} --fix",
     "count": "crassa count-lines",
     "dev:start": "crassa dev-start",
     "start:dev": "crassa start-dev",

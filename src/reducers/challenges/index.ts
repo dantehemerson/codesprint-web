@@ -26,7 +26,7 @@ export default base({
   creators: ({ types }: DuckTypes) => ({
     getChallenges: () => ({ type: types.FETCH })
   }),
-  reducer: (state: Counter, action: Action, { types }: DuckTypes) => produce<Counter>(state, (draft) => {
+  reducer: (state: Counter, action: Action) => produce<Counter>(state, () => {
     switch (action.type) {
       default:
         return

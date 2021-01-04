@@ -18,5 +18,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies 📦
         run: yarn
+      - name: Lint 🎨
+        run: yarn lint
       - name: Tests ✅
         run: yarn test

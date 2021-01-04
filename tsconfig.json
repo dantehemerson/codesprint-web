@@ -8,7 +8,7 @@
       "es2017",
       "dom"
     ],
-    "module": "esnext",
+    "module": "commonjs",
     "rootDirs": [
       "src"
     ],
@@ -22,7 +22,7 @@
     "importHelpers": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "baseUrl": "./",
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
@@ -32,18 +32,18 @@
     "target": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
-    "resolveJsonModule": true, // Required for JSON files
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "types": [
-      "node"
+      "node",
+      "jest",
+      "@testing-library/jest-dom"
     ],
     "typeRoots": [
       "node_modules/@types"
     ],
     "paths": {
-      "config/*": [
-        "src/config/*"
-      ],
+      "config/*": [ "src/config/*"],
       "components/*": [
         "src/components/*"
       ],

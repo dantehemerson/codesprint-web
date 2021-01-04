@@ -6,3 +6,6 @@
 **/js/**
 package.json
 registerServiceWorker.js
+
+# don't ever lint node_modules
+node_modules

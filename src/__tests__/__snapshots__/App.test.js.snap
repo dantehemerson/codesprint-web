@@ -1,0 +1,1320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        style="display: flex; justify-content: center; align-items: center; position: absolute; right: 0px; left: 0px; top: 0px; bottom: 0px;"
+      >
+        Cargando...
+      </div>
+      <div
+        style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 99999999;"
+      >
+        <div
+          style="position: fixed; z-index: 1; box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); background: white; left: 1024px; top: 0px; width: 30%; height: 100%; transition: left 0.2s ease-out,top 0.2s ease-out,width 0.2s ease-out,height 0.2s ease-out,opacity 0.01s linear 0.2s; opacity: 0;"
+        >
+          <div
+            style="position: absolute; z-index: 2; opacity: 0; left: -5px; width: 10px; top: 0px; height: 100%; cursor: col-resize;"
+          />
+          <div
+            style="width: 100%; height: 100%; overflow: auto;"
+          >
+            <div
+              style="font-family: monaco, Consolas, Lucida Console, monospace; position: relative; overflow-y: hidden; width: 100%; height: 100%; min-width: 300px; direction: ltr; background-color: rgb(42, 47, 58);"
+            >
+              <div
+                style="text-align: center; border-bottom-width: 1px; border-bottom-style: solid; border-color: #4f5a65; z-index: 1; display: flex; flex-direction: row;"
+              >
+                <a
+                  style="cursor: pointer; font-weight: bold; border-radius: 3px; padding: 4px; margin: 5px 3px 5px 3px; flex-grow: 1; display: inline-block; font-size: 0.8em; color: white; text-decoration: none; background-color: rgb(79, 90, 101);"
+                >
+                  Reset
+                </a>
+                <a
+                  style="cursor: pointer; font-weight: bold; border-radius: 3px; padding: 4px; margin: 5px 3px 5px 3px; flex-grow: 1; display: inline-block; font-size: 0.8em; color: white; text-decoration: none; background-color: rgb(79, 90, 101);"
+                >
+                  Revert
+                </a>
+                <a
+                  style="cursor: text; font-weight: bold; border-radius: 3px; padding: 4px; margin: 5px 3px 5px 3px; flex-grow: 1; display: inline-block; font-size: 0.8em; color: white; text-decoration: none; background-color: transparent; opacity: 0.2;"
+                >
+                  Sweep
+                </a>
+                <a
+                  style="cursor: pointer; font-weight: bold; border-radius: 3px; padding: 4px; margin: 5px 3px 5px 3px; flex-grow: 1; display: inline-block; font-size: 0.8em; color: white; text-decoration: none; background-color: rgb(79, 90, 101);"
+                >
+                  Commit
+                </a>
+              </div>
+              <div
+                style="position: absolute; left: 0px; right: 0px; top: 30px; bottom: 0px; overflow-x: hidden; overflow-y: auto;"
+              >
+                <div>
+                  <div
+                    style="opacity: 1; text-decoration: none; color: rgb(255, 255, 255);"
+                  >
+                    <div
+                      style="background-color: rgb(79, 90, 101); color: rgb(255, 255, 255); display: block; opacity: 1; cursor: default;"
+                    >
+                      <div
+                        style="padding-top: 8px; padding-bottom: 7px; padding-left: 16px;"
+                      >
+                        @@INIT
+                      </div>
+                      <div
+                        style="margin: 0px; padding-left: 16px; overflow: auto; background-color: rgb(42, 47, 58);"
+                      />
+                    </div>
+                    <div
+                      style="padding-left: 16px;"
+                    >
+                      <ul
+                        style="border: 0px; padding: 0px; margin: 0.5em 0px 0.5em 0.125em; list-style: none; background-color: rgb(42, 47, 58);"
+                      >
+                        <li
+                          style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+                        >
+                          <div
+                            style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                          >
+                            <div
+                              style="margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                            >
+                              ▶
+                            </div>
+                          </div>
+                          <label
+                            style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                          >
+                            <span>
+                              state
+                              :
+                            </span>
+                          </label>
+                          <span
+                            style="padding-left: 0.5em; cursor: default; color: rgb(190, 190, 190);"
+                          >
+                            <span>
+                              <span
+                                style="margin-left: 0.3em; margin-right: 0.3em;"
+                              >
+                                {}
+                              </span>
+                               
+                              5 keys
+                            </span>
+                          </span>
+                          <ul
+                            style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                          >
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  router
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  2 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  challenges
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  challenge
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  users
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  user
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    style="opacity: 1; text-decoration: none; color: rgb(255, 255, 255);"
+                  >
+                    <div
+                      style="background-color: rgb(79, 90, 101); color: rgb(255, 255, 255); display: block; opacity: 1; cursor: pointer;"
+                    >
+                      <div
+                        style="padding-top: 8px; padding-bottom: 7px; padding-left: 16px;"
+                      >
+                        @@router/LOCATION_CHANGE
+                      </div>
+                      <div
+                        style="margin: 0px; padding-left: 16px; overflow: auto; background-color: rgb(42, 47, 58);"
+                      >
+                        <ul
+                          style="border: 0px; padding: 0px; margin: 0.5em 0px 0.5em 0.125em; list-style: none; background-color: rgb(42, 47, 58);"
+                        >
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                action
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(190, 190, 190);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                1 key
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            >
+                              <li
+                                style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                              >
+                                <div
+                                  style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                                >
+                                  <div
+                                    style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                  >
+                                    ▶
+                                  </div>
+                                </div>
+                                <label
+                                  style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                                >
+                                  <span>
+                                    payload
+                                    :
+                                  </span>
+                                </label>
+                                <span
+                                  style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                                >
+                                  <span>
+                                    <span
+                                      style="margin-left: 0.3em; margin-right: 0.3em;"
+                                    >
+                                      {}
+                                    </span>
+                                     
+                                    3 keys
+                                  </span>
+                                </span>
+                                <ul
+                                  style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                                />
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      style="padding-left: 16px;"
+                    >
+                      <ul
+                        style="border: 0px; padding: 0px; margin: 0.5em 0px 0.5em 0.125em; list-style: none; background-color: rgb(42, 47, 58);"
+                      >
+                        <li
+                          style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+                        >
+                          <div
+                            style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                          >
+                            <div
+                              style="margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                            >
+                              ▶
+                            </div>
+                          </div>
+                          <label
+                            style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                          >
+                            <span>
+                              state
+                              :
+                            </span>
+                          </label>
+                          <span
+                            style="padding-left: 0.5em; cursor: default; color: rgb(190, 190, 190);"
+                          >
+                            <span>
+                              <span
+                                style="margin-left: 0.3em; margin-right: 0.3em;"
+                              >
+                                {}
+                              </span>
+                               
+                              5 keys
+                            </span>
+                          </span>
+                          <ul
+                            style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                          >
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  router
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  2 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  challenges
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  challenge
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  users
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  user
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      style="display: flex; justify-content: center; align-items: center; position: absolute; right: 0px; left: 0px; top: 0px; bottom: 0px;"
+    >
+      Cargando...
+    </div>
+    <div
+      style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 99999999;"
+    >
+      <div
+        style="position: fixed; z-index: 1; box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); background: white; left: 1024px; top: 0px; width: 30%; height: 100%; transition: left 0.2s ease-out,top 0.2s ease-out,width 0.2s ease-out,height 0.2s ease-out,opacity 0.01s linear 0.2s; opacity: 0;"
+      >
+        <div
+          style="position: absolute; z-index: 2; opacity: 0; left: -5px; width: 10px; top: 0px; height: 100%; cursor: col-resize;"
+        />
+        <div
+          style="width: 100%; height: 100%; overflow: auto;"
+        >
+          <div
+            style="font-family: monaco, Consolas, Lucida Console, monospace; position: relative; overflow-y: hidden; width: 100%; height: 100%; min-width: 300px; direction: ltr; background-color: rgb(42, 47, 58);"
+          >
+            <div
+              style="text-align: center; border-bottom-width: 1px; border-bottom-style: solid; border-color: #4f5a65; z-index: 1; display: flex; flex-direction: row;"
+            >
+              <a
+                style="cursor: pointer; font-weight: bold; border-radius: 3px; padding: 4px; margin: 5px 3px 5px 3px; flex-grow: 1; display: inline-block; font-size: 0.8em; color: white; text-decoration: none; background-color: rgb(79, 90, 101);"
+              >
+                Reset
+              </a>
+              <a
+                style="cursor: pointer; font-weight: bold; border-radius: 3px; padding: 4px; margin: 5px 3px 5px 3px; flex-grow: 1; display: inline-block; font-size: 0.8em; color: white; text-decoration: none; background-color: rgb(79, 90, 101);"
+              >
+                Revert
+              </a>
+              <a
+                style="cursor: text; font-weight: bold; border-radius: 3px; padding: 4px; margin: 5px 3px 5px 3px; flex-grow: 1; display: inline-block; font-size: 0.8em; color: white; text-decoration: none; background-color: transparent; opacity: 0.2;"
+              >
+                Sweep
+              </a>
+              <a
+                style="cursor: pointer; font-weight: bold; border-radius: 3px; padding: 4px; margin: 5px 3px 5px 3px; flex-grow: 1; display: inline-block; font-size: 0.8em; color: white; text-decoration: none; background-color: rgb(79, 90, 101);"
+              >
+                Commit
+              </a>
+            </div>
+            <div
+              style="position: absolute; left: 0px; right: 0px; top: 30px; bottom: 0px; overflow-x: hidden; overflow-y: auto;"
+            >
+              <div>
+                <div
+                  style="opacity: 1; text-decoration: none; color: rgb(255, 255, 255);"
+                >
+                  <div
+                    style="background-color: rgb(79, 90, 101); color: rgb(255, 255, 255); display: block; opacity: 1; cursor: default;"
+                  >
+                    <div
+                      style="padding-top: 8px; padding-bottom: 7px; padding-left: 16px;"
+                    >
+                      @@INIT
+                    </div>
+                    <div
+                      style="margin: 0px; padding-left: 16px; overflow: auto; background-color: rgb(42, 47, 58);"
+                    />
+                  </div>
+                  <div
+                    style="padding-left: 16px;"
+                  >
+                    <ul
+                      style="border: 0px; padding: 0px; margin: 0.5em 0px 0.5em 0.125em; list-style: none; background-color: rgb(42, 47, 58);"
+                    >
+                      <li
+                        style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+                      >
+                        <div
+                          style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                        >
+                          <div
+                            style="margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                          >
+                            ▶
+                          </div>
+                        </div>
+                        <label
+                          style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                        >
+                          <span>
+                            state
+                            :
+                          </span>
+                        </label>
+                        <span
+                          style="padding-left: 0.5em; cursor: default; color: rgb(190, 190, 190);"
+                        >
+                          <span>
+                            <span
+                              style="margin-left: 0.3em; margin-right: 0.3em;"
+                            >
+                              {}
+                            </span>
+                             
+                            5 keys
+                          </span>
+                        </span>
+                        <ul
+                          style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                        >
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                router
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                2 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                challenges
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                3 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                challenge
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                3 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                users
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                3 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                user
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                3 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  style="opacity: 1; text-decoration: none; color: rgb(255, 255, 255);"
+                >
+                  <div
+                    style="background-color: rgb(79, 90, 101); color: rgb(255, 255, 255); display: block; opacity: 1; cursor: pointer;"
+                  >
+                    <div
+                      style="padding-top: 8px; padding-bottom: 7px; padding-left: 16px;"
+                    >
+                      @@router/LOCATION_CHANGE
+                    </div>
+                    <div
+                      style="margin: 0px; padding-left: 16px; overflow: auto; background-color: rgb(42, 47, 58);"
+                    >
+                      <ul
+                        style="border: 0px; padding: 0px; margin: 0.5em 0px 0.5em 0.125em; list-style: none; background-color: rgb(42, 47, 58);"
+                      >
+                        <li
+                          style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+                        >
+                          <div
+                            style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                          >
+                            <div
+                              style="margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                            >
+                              ▶
+                            </div>
+                          </div>
+                          <label
+                            style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                          >
+                            <span>
+                              action
+                              :
+                            </span>
+                          </label>
+                          <span
+                            style="padding-left: 0.5em; cursor: default; color: rgb(190, 190, 190);"
+                          >
+                            <span>
+                              <span
+                                style="margin-left: 0.3em; margin-right: 0.3em;"
+                              >
+                                {}
+                              </span>
+                               
+                              1 key
+                            </span>
+                          </span>
+                          <ul
+                            style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                          >
+                            <li
+                              style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                            >
+                              <div
+                                style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                              >
+                                <div
+                                  style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                                >
+                                  ▶
+                                </div>
+                              </div>
+                              <label
+                                style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                              >
+                                <span>
+                                  payload
+                                  :
+                                </span>
+                              </label>
+                              <span
+                                style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                              >
+                                <span>
+                                  <span
+                                    style="margin-left: 0.3em; margin-right: 0.3em;"
+                                  >
+                                    {}
+                                  </span>
+                                   
+                                  3 keys
+                                </span>
+                              </span>
+                              <ul
+                                style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                              />
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    style="padding-left: 16px;"
+                  >
+                    <ul
+                      style="border: 0px; padding: 0px; margin: 0.5em 0px 0.5em 0.125em; list-style: none; background-color: rgb(42, 47, 58);"
+                    >
+                      <li
+                        style="position: relative; padding-top: 0.25em; margin-left: 0px; padding-left: 0px;"
+                      >
+                        <div
+                          style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                        >
+                          <div
+                            style="margin-left: 0px; transition: 150ms; transform: rotateZ(90deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                          >
+                            ▶
+                          </div>
+                        </div>
+                        <label
+                          style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                        >
+                          <span>
+                            state
+                            :
+                          </span>
+                        </label>
+                        <span
+                          style="padding-left: 0.5em; cursor: default; color: rgb(190, 190, 190);"
+                        >
+                          <span>
+                            <span
+                              style="margin-left: 0.3em; margin-right: 0.3em;"
+                            >
+                              {}
+                            </span>
+                             
+                            5 keys
+                          </span>
+                        </span>
+                        <ul
+                          style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                        >
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                router
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                2 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                challenges
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                3 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                challenge
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                3 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                users
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                3 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                          <li
+                            style="position: relative; padding-top: 0.25em; margin-left: 0.875em; padding-left: 0px;"
+                          >
+                            <div
+                              style="display: inline-block; padding-right: 0.5em; padding-left: 0px; cursor: pointer;"
+                            >
+                              <div
+                                style="margin-left: 0px; transition: 150ms; transform: rotateZ(0deg); transform-origin: 45% 50%; position: relative; line-height: 1.1em; font-size: 0.75em; color: rgb(111, 179, 210);"
+                              >
+                                ▶
+                              </div>
+                            </div>
+                            <label
+                              style="display: inline-block; color: rgb(111, 179, 210); margin: 0px; padding: 0px; cursor: pointer;"
+                            >
+                              <span>
+                                user
+                                :
+                              </span>
+                            </label>
+                            <span
+                              style="padding-left: 0.5em; cursor: default; color: rgb(161, 198, 89);"
+                            >
+                              <span>
+                                <span
+                                  style="margin-left: 0.3em; margin-right: 0.3em;"
+                                >
+                                  {}
+                                </span>
+                                 
+                                3 keys
+                              </span>
+                            </span>
+                            <ul
+                              style="padding: 0px; margin: 0px; list-style: none; display: block;"
+                            />
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
